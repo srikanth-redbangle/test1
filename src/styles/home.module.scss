@@ -1,0 +1,84 @@
+// .title {
+//   @apply flex-col md:flex-row font-everett;
+//   font-size: clamp(56px, 8.4vw, 120px);
+//   font-weight: 500;
+//   line-height: 1;
+//   letter-spacing: -2.4px;
+//   text-transform: uppercase;
+// }
+
+.title {
+  @apply flex-col md:flex-row font-everett;
+  font-size: clamp(56px, 8.4vw, 120px);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -2.4px;
+  text-transform: uppercase;
+  @media (max-width: 768px) {
+    // font-size : 40px;
+    color: #333;
+    line-height: 1;
+  }
+}
+.content {
+  height: auto;
+  width: 204px;
+  @media (min-width: 768px) {
+    height: clamp(56px, 8.4vw, 120px);
+    width: auto;
+  }
+}
+
+// .heroMarquee {
+//   background-repeat: repeat-x;
+//   background-image: url('/img/home/hero-ribbon-mb.svg');
+//   height: 50px;
+//   width: 100%;
+//   animation: marquee-image-mb 15s infinite linear;
+
+//   @keyframes marquee-image-mb {
+//     0% {
+//       background-position: 0 0;
+//     }
+
+//     100% {
+//       background-position: -661px 0;
+//     }
+//   }
+
+//   @media (min-width: 768px) {
+//     background-image: url('/img/home/hero-ribbon.svg');
+//     height: 96px;
+//     animation: marquee-image 15s infinite linear;
+
+//     @keyframes marquee-image {
+//       0% {
+//         background-position: 0 0;
+//       }
+
+//       100% {
+//         background-position: -1447px 0;
+//       }
+//     }
+//   }
+// }
+
+.letterContainer {
+  height: clamp(56px, 8.4vw, 120px);
+  // overflow: hidden;
+  .letterRoll {
+    @apply flex flex-col -translate-y-full;
+  }
+  @media (max-width: 768px) {
+    height: auto;
+  }
+}
+
+.rtol {
+  transform: translateX(10%);
+  opacity: 0;
+}
+.ltor {
+  transform: translateX(-10%);
+  opacity: 0;
+}
